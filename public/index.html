@@ -1,37 +1,345 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MusonCheck
+    </title>
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+</head>
+<body>
+  <div class="header-container">
+        <div class="logo">
+          <p class="logo-text">MusonCheck.FM
+        </div>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+        <div class="search-container">
+          <form class="search-form">
+            <div class="search-wrapper">
+              <input placeholder="Поиск..." class="search-row">
+              <button class="search-button">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0 0 50 50">
+                <path d="M 21 3 C 11.621094 3 4 10.621094 4 20 C 4 29.378906 11.621094 37 21 37 C 24.710938 37 28.140625 35.804688 30.9375 33.78125 L 44.09375 46.90625 L 46.90625 44.09375 L 33.90625 31.0625 C 36.460938 28.085938 38 24.222656 38 20 C 38 10.621094 30.378906 3 21 3 Z M 21 5 C 29.296875 5 36 11.703125 36 20 C 36 28.296875 29.296875 35 21 35 C 12.703125 35 6 28.296875 6 20 C 6 11.703125 12.703125 5 21 5 Z"></path>
+                </svg></button>
+            </div>
+          </form>
+      </div>
+  </div>
+    <div class="title-container">
+        <div class="title">
+        <h2>popular tracks</h2>
+        <hr class="title-underline">
+      </div>
+    </div>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+    <div class="chart-container">
+      <div class="chart-item">
+        <div class="chart-item-cover" style="background-image: url(https://lastfm.freetls.fastly.net/i/u/300x300/fadd0582a9a702951a85e3505df81f81.jpg);">
+        </div>
+        <div class="chart-item-description">
+          <div class="chart-item-trackname">Mona Lisa</div>
+          <div class="chart-item-artistname">j-hope</div>
+          <ul class="chart-item-tags">
+            <li class="chart-item-tag">song-of-the-year</li>
+            <li class="chart-item-tag">cute</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="chart-item">
+        <div class="chart-item-cover" style="background-image: url(https://lastfm.freetls.fastly.net/i/u/300x300/34ec86a17eee66055d98b42fe2a2a956.jpg);">
+        </div>
+        <div class="chart-item-description">
+          <div class="chart-item-trackname">Running Wild</div>
+          <div class="chart-item-artistname">Jin</div>
+          <ul class="chart-item-tags">
+            <li class="chart-item-tag">jin</li>
+            <li class="chart-item-tag">k-pop</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="chart-item">
+        <div class="chart-item-cover" style="background-image: url(https://lastfm.freetls.fastly.net/i/u/300x300/b4cb9abecedadfa4a4ce9b2eea40ef14.jpg)">
+        </div>
+        <div class="chart-item-description">
+          <div class="chart-item-trackname">Twilight Zone</div>
+          <div class="chart-item-artistname">Ariana Grande</div>
+          <ul class="chart-item-tags">
+            <li class="chart-item-tag">pop</li>
+            <li class="chart-item-tag">rnb</li>
+            <li class="chart-item-tag">female vocalists</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="chart-item">
+        <div class="chart-item-cover" style="background-image: url(https://lastfm.freetls.fastly.net/i/u/300x300/1d2e7cea1c6384e1f6b80d41ff3ff53f.jpg)">
+        </div>
+        <div class="chart-item-description">
+          <div class="chart-item-trackname">Who</div>
+          <div class="chart-item-artistname">Jimin</div>
+          <ul class="chart-item-tags">
+            <li class="chart-item-tag">soty</li>
+            <li class="chart-item-tag">jimin</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="chart-item">
+        <div class="chart-item-cover" style="background-image: url(https://lastfm.freetls.fastly.net/i/u/300x300/8875e1771ad0e51a23a8320b0169c030.jpg)">
+        </div>
+        <div class="chart-item-description">
+          <div class="chart-item-trackname">Haegeum</div>
+          <div class="chart-item-artistname">Agust D</div>
+          <ul class="chart-item-tags">
+            <li class="chart-item-tag">agustd</li>
+            <li class="chart-item-tag">haegeum</li>
+            <li class="chart-item-tag">rap</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="chart-item">
+        <div class="chart-item-cover" style="background-image: url(https://lastfm.freetls.fastly.net/i/u/300x300/f1a24e3d0934347601dd7445f7a970a3.jpg)">
+        </div>
+        <div class="chart-item-description">
+          <div class="chart-item-trackname">Winter Ahead (with PARK HYO SHIN)</div>
+          <div class="chart-item-artistname">V</div>
+          <ul class="chart-item-tags">
+            <li class="chart-item-tag">jazz</li>
+            <li class="chart-item-tag">taetae</li>
+            <li class="chart-item-tag">the man is art</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="chart-item">
+        <div class="chart-item-cover" style="background-image: url(https://lastfm.freetls.fastly.net/i/u/300x300/f2bd30934043834988881bcd99632342.jpg)">
+        </div>
+        <div class="chart-item-description">
+          <div class="chart-item-trackname">EVIL J0RDAN</div>
+          <div class="chart-item-artistname">Playboi Carti</div>
+          <ul class="chart-item-tags">
+            <li class="chart-item-tag">gangsta rap</li>
+            <li class="chart-item-tag">southern hip hop</li>
+            <li class="chart-item-tag">trap</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="chart-item">
+        <div class="chart-item-cover" style="background-image: url(https://lastfm.freetls.fastly.net/i/u/300x300/0d914dc8754e862a64316fa19a07e235.jpg)">
+        </div>
+        <div class="chart-item-description">
+          <div class="chart-item-trackname">Sports car</div>
+          <div class="chart-item-artistname">Tate McRae</div>
+          <ul class="chart-item-tags">
+            <li class="chart-item-tag">pop</li>
+            <li class="chart-item-tag">so close to what</li>
+            <li class="chart-item-tag">rnb</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="chart-item">
+        <div class="chart-item-cover" style="background-image: url(https://lastfm.freetls.fastly.net/i/u/300x300/5b344e792abff0b84e203e5581021d4d.jpg)">
+        </div>
+        <div class="chart-item-description">
+          <div class="chart-item-trackname">like JENNIE</div>
+          <div class="chart-item-artistname">Jennie</div>
+          <ul class="chart-item-tags">
+            <li class="chart-item-tag">funk mandelao</li>
+            <li class="chart-item-tag">funk automotivo</li>
+            <li class="chart-item-tag">funk</li>
+          </ul>
+        </div>
+      </div>
+      
+    </div>
+
+    <hr class="block-separator">
+
+    <div class="title-container">
+      <div class="title">
+      <h2>hot artists</h2>
+      <hr class="title-underline">
+    </div>
+  </div>
+
+  <div class="artists-cards-container">
+    <div class="artist-card" style="background-image: url(https://lastfm.freetls.fastly.net/i/u/arG/381b96adaf5cae1dbe4f3e60d79517d5.jpg);">
+      <div class="artist-card-info">
+        <div class="artist-card-name">Playboi Carti</div>
+        <ul class="artist-card-tags">
+          <li class="artist-card-tag">trap</li>
+          <li class="artist-card-tag">cloud rap</li>
+          <li class="artist-card-tag">rap</li>
+        </ul>
+        <div class="artist-card-bio">Jordan Terrell Carter (born September 13, 1995 or 1996), known professionally as Playboi Carti, is an American rapper.</div>
+        <div class="artist-card-related-container">
+        <div class="artist-card-related">
+            <div class="artist-card-related-cover" style="background-image: url(https://lastfm.freetls.fastly.net/i/u/300x300/e993dbd3bd4713951175f4cc80207d0f.jpg);"></div>
+            <div class="artist-card-related-description">
+              <div class="artist-card-related-type">latest release</div>
+              <div class="artist-card-related-name">MUSIC</div>
+              <div class="artist-card-related-bottom">25 March 2025</div>
+            </div>
+        </div>
+        <div class="artist-card-related">
+          <div class="artist-card-related-cover" style="background-image: url(https://lastfm.freetls.fastly.net/i/u/300x300/e993dbd3bd4713951175f4cc80207d0f.jpg);"></div>
+          <div class="artist-card-related-description">
+            <div class="artist-card-related-type">popular this week</div>
+            <div class="artist-card-related-name">EVIL J0RDAN</div>
+            <div class="artist-card-related-bottom">214,200 listeners</div>
+          </div>
+      </div>
+    </div>
+      </div>
+    </div>
+
+    <div class="artist-card" style="background-image: url(https://lastfm.freetls.fastly.net/i/u/arG/5e2622187d7eb41278b72b64d791557a.jpg);">
+      <div class="artist-card-info">
+        <div class="artist-card-name">Ariana Grande</div>
+        <ul class="artist-card-tags">
+          <li class="artist-card-tag">pop</li>
+          <li class="artist-card-tag">rnb</li>
+          <li class="artist-card-tag">female vocalists</li>
+        </ul>
+        <div class="artist-card-bio">
+          Ariana Grande-Butera, better known professionally as simply Ariana Grande, is an American singer, songwriter and actress.
+        </div>
+        <div class="artist-card-related-container">
+          <div class="artist-card-related">
+            <div class="artist-card-related-cover" style="background-image: url(https://lastfm.freetls.fastly.net/i/u/300x300/e94f5512275dae40317795918ef9a401.jpg);"></div>
+            <div class="artist-card-related-description">
+              <div class="artist-card-related-type">latest release</div>
+              <div class="artist-card-related-name">eternal sunshine deluxe</div>
+              <div class="artist-card-related-bottom">28 March 2025</div>
+            </div>
+        </div>
+        <div class="artist-card-related">
+          <div class="artist-card-related-cover" style="background-image: url(https://lastfm.freetls.fastly.net/i/u/300x300/e94f5512275dae40317795918ef9a401.jpg);"></div>
+          <div class="artist-card-related-description">
+            <div class="artist-card-related-type">popular this week</div>
+            <div class="artist-card-related-name">Twilight Zone</div>
+            <div class="artist-card-related-bottom">151,720 listeners</div>
+          </div>
+      </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="artists-chart-container">
+
+    <div class="artist-chart-item">
+      <div class="artist-chart-image" style="background-image: url(https://lastfm.freetls.fastly.net/i/u/300x300/86ce426bd9d2162e1a03844bde9f9dd0.jpg);"></div>
+      <div class="artist-chart-name">j-hope</div>
+      <ul class="artist-chart-tags">
+        <li class="artist-chart-tag">k-pop</li>
+        <li class="artist-chart-tag">hip-hop</li>
+        <li class="artist-chart-tag">rap</li>
+      </ul>
+    </div>
+
+    <div class="artist-chart-item">
+      <div class="artist-chart-image" style="background-image: url(https://lastfm.freetls.fastly.net/i/u/300x300/52947524ffeb4892356840e7d360df1a.jpg);"></div>
+      <div class="artist-chart-name">Taylor Swift</div>
+      <ul class="artist-chart-tags">
+        <li class="artist-chart-tag">pop</li>
+        <li class="artist-chart-tag">country</li>
+        <li class="artist-chart-tag">singer-songwriter</li>
+      </ul>
+    </div>
+
+    <div class="artist-chart-item">
+      <div class="artist-chart-image" style="background-image: url(https://lastfm.freetls.fastly.net/i/u/300x300/836f168b2844542f2561beca2ab0a080.jpg);"></div>
+      <div class="artist-chart-name">BTS</div>
+      <ul class="artist-chart-tags">
+        <li class="artist-chart-tag">k-pop</li>
+        <li class="artist-chart-tag">bts</li>
+        <li class="artist-chart-tag">kpop</li>
+      </ul>
+    </div>
+
+    <div class="artist-chart-item">
+      <div class="artist-chart-image" style="background-image: url(https://lastfm.freetls.fastly.net/i/u/300x300/2fa07d64cb62e43b854149e11c457f48.jpg);"></div>
+      <div class="artist-chart-name">Kendrick Lamar</div>
+      <ul class="artist-chart-tags">
+        <li class="artist-chart-tag">rap</li>
+        <li class="artist-chart-tag">hip-hop</li>
+      </ul>
+    </div>
+
+    <div class="artist-chart-item">
+      <div class="artist-chart-image" style="background-image: url(https://lastfm.freetls.fastly.net/i/u/300x300/21f87266d1753bff9082accbc06d7271.jpg);"></div>
+      <div class="artist-chart-name">Sabrina Carpenter</div>
+      <ul class="artist-chart-tags">
+        <li class="artist-chart-tag">pop</li>
+        <li class="artist-chart-tag">female vocalists</li>
+        <li class="artist-chart-tag">rnb</li>
+      </ul>
+    </div>
+
+    <div class="artist-chart-item">
+      <div class="artist-chart-image" style="background-image: url(https://lastfm.freetls.fastly.net/i/u/300x300/7f507c6edf9bd36030e8495986517ac5.jpg);"></div>
+      <div class="artist-chart-name">Tyler, The Creator</div>
+      <ul class="artist-chart-tags">
+        <li class="artist-chart-tag">hip-hop</li>
+        <li class="artist-chart-tag">rap</li>
+        <li class="artist-chart-tag">ofwgkta</li>
+      </ul>
+    </div>
+
+    <div class="artist-chart-item">
+      <div class="artist-chart-image" style="background-image: url(https://lastfm.freetls.fastly.net/i/u/300x300/e4825affb40957256b8ba172da4bd0bc.jpg);"></div>
+      <div class="artist-chart-name">Jin</div>
+      <ul class="artist-chart-tags">
+        <li class="artist-chart-tag">rap</li>
+        <li class="artist-chart-tag">hip-hop</li>
+        <li class="artist-chart-tag">bts</li>
+      </ul>
+    </div>
+
+    <div class="artist-chart-item">
+      <div class="artist-chart-image" style="background-image: url(https://lastfm.freetls.fastly.net/i/u/300x300/6b1d577d85c9c64594d2917fcbac73ca.jpg);"></div>
+      <div class="artist-chart-name">Tate McRae</div>
+      <ul class="artist-chart-tags">
+        <li class="artist-chart-tag">pop</li>
+        <li class="artist-chart-tag">my top songs</li>
+        <li class="artist-chart-tag">electropop</li>
+      </ul>
+    </div>
+
+    <div class="artist-chart-item">
+      <div class="artist-chart-image" style="background-image: url(https://lastfm.freetls.fastly.net/i/u/300x300/712db506065be36bb666bfb34ed9072a.jpg);"></div>
+      <div class="artist-chart-name">Charli xcx</div>
+      <ul class="artist-chart-tags">
+        <li class="artist-chart-tag">pop</li>
+        <li class="artist-chart-tag">synthpop</li>
+        <li class="artist-chart-tag">electronic</li>
+      </ul>
+    </div>
+
+    <div class="artist-chart-item">
+      <div class="artist-chart-image" style="background-image: url(https://lastfm.freetls.fastly.net/i/u/300x300/9285bafd0ae65398c5513bb2986b910f.jpg);"></div>
+      <div class="artist-chart-name">Lady Gaga</div>
+      <ul class="artist-chart-tags">
+        <li class="artist-chart-tag">pop</li>
+        <li class="artist-chart-tag">dance</li>
+        <li class="artist-chart-tag">electronic</li>
+      </ul>
+    </div>
+
+  </div>
+
+
+    <div class="footer-container">
+    <footer>
+        <p>© 2025 MusonCheck FM. All rights reserved</p>
+    </footer>
+  </div>
+</body>
 </html>
