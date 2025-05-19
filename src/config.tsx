@@ -1,0 +1,1 @@
+export const LAST_FM_API_KEY = 'a8d4d3f17d913cf3ee130debf6df6161';
