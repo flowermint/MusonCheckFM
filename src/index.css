@@ -365,3 +365,154 @@
             content: '•';
             padding-left: 0.3rem;
           }
+
+          .spinner {
+  width: 175px;
+  height: 175px;
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left-color: rgb(1, 129, 23);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.search-tracks-grid{
+        margin-top: 1em;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Ровно 3 колонки */
+    gap: 16px;
+    justify-self: center;
+}
+
+.search-artists-grid{
+    justify-self:center;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); 
+    gap: 1.5rem
+}
+
+.search-artist-card{
+    height: 175px;
+    width: 175px;
+}
+
+.search-artist-image{
+      text-shadow: 
+  -1px -1px 5px #000,  
+   1px -1px 5px #000,
+   -1px 1px 5px #000,
+    1px 1px 5px #000;
+}
+
+.search-artist-info{
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    color:white;
+  
+}
+
+.search-artist-name{
+    text-decoration: inherit;
+    color:inherit;
+    font-size: large;
+    margin-bottom: 1rem;
+}
+
+.search-albums-grid{
+    justify-self:center;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); 
+    gap: 1.5rem
+}
+
+.search-album-card{
+    width: 175px;
+    height: 175px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.search-section {
+  margin-bottom: 2rem;
+}
+
+.search-artist-card {
+  transition: transform 0.2s;
+  position: relative;
+  height: 175px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.search-artist-image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.search-artist-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+}
+
+.search-album-card {
+  width: 175px;
+  height: 175px;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.2s;
+  position: relative;
+  height: 175px;
+  border-radius: 8px;
+  overflow: hidden;
+  
+}
+
+.search-album-info{
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  color:white;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+}
+
+.search-album-artist{
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    color:rgb(223, 217, 217);
+}
+
+.serach-album-artist:hover{
+    text-decoration: underline;
+    color:black
+}
+
+.search-album-title{
+    text-decoration: inherit;
+    color:inherit;
+    font-size: large;
+    margin-bottom: 1rem;
+}
+
+
+.search-album-card:hover {
+  transform: scale(1.03);
+}
+
+
+.search-artist-card:hover {
+  transform: scale(1.03);
+}
