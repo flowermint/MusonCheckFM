@@ -112,6 +112,11 @@ export const SearchPage = () => {
           )}
         </div>
       </section>
+      <div className="footer-container">
+        <footer>
+          <p>© 2025 MusonCheck FM. All rights reserved</p>
+        </footer>
+      </div>
     </div>
   );
 };

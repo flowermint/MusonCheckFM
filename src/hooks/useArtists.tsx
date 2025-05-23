@@ -2,7 +2,26 @@ import { useState, useEffect } from 'react';
 import { fetchTopArtists, fetchArtistInfo } from '../api/lastfm';
 import { Artist } from '../types/artist';
 
-export const useArtists = (limit = 14) => {
+/**
+ * Хук для получения данных об артистах из чарта Last.fm.
+
+ * 
+ * @param {number} [limit=20] - Количество возвращаемых артистов (по умолчанию 20)
+ * @returns {Object} Объект с результатами выполнения
+ * @returns {Artist[]} artists - Массив объектов артистов с полной информацией
+ * @returns {boolean} loading - Флаг состояния загрузки
+ * @returns {string|null} error - Сообщение об ошибке (null если ошибки нет)
+ * 
+ * @example
+ * // Получение 8 топовых артистов
+ * const { artists, loading, error } = useArtists(8);
+ * 
+ * @example
+ * // Использование со значением по умолчанию (20 артистов)
+ * const { artists } = useArtists();
+ * console.log(artists[0].name); // Название первого артиста
+ */
+export const useArtists = (limit = 20) => {
   const [artists, setArtists] = useState<Artist[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);

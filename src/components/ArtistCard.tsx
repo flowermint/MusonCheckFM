@@ -10,7 +10,7 @@ export const ArtistCard = ({ artist, variant = 'large' }: ArtistCardProps) => {
     return (
       <div 
         className="artist-card large"
-        style={{ backgroundImage: `url(${artist.getLargestImage()})` }}
+        style={{ backgroundImage: `url(${artist?.image?.getLargest()})` }}
       >
         <div className="artist-card-info">
           <a
@@ -48,12 +48,11 @@ export const ArtistCard = ({ artist, variant = 'large' }: ArtistCardProps) => {
     );
   }
 
-  // Вариант для small (регулярных артистов)
   return (
     <div className="artist-chart-item">
       <div
         className="artist-chart-image"
-        style={{ backgroundImage: `url(${artist.getLargestImage()})` }}
+        style={{ backgroundImage: `url(${artist.image?.getLargest()})` }}
       />
       <a
         className="artist-chart-name"

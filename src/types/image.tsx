@@ -9,7 +9,10 @@ export class Image {
         this.large = images.find(img => img.size === "large" || img['@size'] === "large")?.["#text"] || "";
         this.extralarge = images.find(img => img.size === "extralarge" || img['@size'] === "extralarge")?.["#text"] || "";
     }
-
+ /**
+   * Возвращает URL самого большого доступного изображения исполнителя
+   * @returns {string} URL изображения или дефолтное изображение, если своих нет
+   */
     getLargest(): string {
         return this.extralarge || this.large || this.medium || this.small || "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png";
     }

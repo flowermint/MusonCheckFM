@@ -21,7 +21,6 @@ export const AlbumCard = ({ album }: AlbumCardProps) => (
       >
         {album.name}
       </a>
-      
       <a
         href={`https://last.fm/music/${album.artist}`}
         target="_blank"

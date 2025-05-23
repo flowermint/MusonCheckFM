@@ -17,17 +17,12 @@ export class Artist {
     this.tags = artistData?.tags?.tag?.map((tag: any) => tag.name) || [];
     this.listeners = artistData?.stats?.listeners || 0;
   }
-
-  getLargestImage(): string {
-    return (
-      this.image?.extralarge ||
-      this.image?.large ||
-      this.image?.medium ||
-      this.image?.small ||
-      "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-    );
-  }
-
+  /**
+   * Загружает изображение исполнителя.
+   * Использует первый альбом из топ-альбомов исполнителя как источник изображений
+   * @returns {Promise<void>}
+   * @throws {Error} В случае ошибки
+   */
   async fetchImages(): Promise<void> {
     try {
       const response = await fetch(

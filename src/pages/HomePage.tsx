@@ -57,7 +57,6 @@ export const HomePage = () => {
         }
       </div>
 
-      {/* Секция остальных артистов */}
       <div className="artists-chart-container">
         {
           regularArtists.map(artist => (

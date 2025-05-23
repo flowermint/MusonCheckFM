@@ -1,7 +1,29 @@
 import { useState, useEffect } from 'react';
 import { Track} from '../types/index';
 import { searchTracks, searchArtists, searchAlbums, fetchTrackInfo } from '../api/lastfm';
-
+/**
+ * Хук для поиска треков с Last.fm
+ * 
+ * @param {string} query - Название трека
+ * 
+ * @returns {Track[]} tracks - Найденные треки (массив объектов Track)
+ * @returns {boolean} loading - Флаг выполнения запроса (true - в процессе загрузки)
+ * @returns {string} error - Сообщение об ошибке (пустая строка, если ошибок нет)
+ * 
+ * @example
+ * // Базовое использование
+ * const { tracks, loading, error } = useSearchTracks('Bohemian Rhapsody');
+ * 
+ * @example
+ * // Обработка состояний загрузки
+ * const SearchResults = ({ query }) => {
+ *   const { tracks, loading, error } = useSearchTracks(query);
+ *   
+ *   if (loading) return <Loader />;
+ *   if (error) return <Error message={error} />;
+ *   return <TrackList tracks={tracks} />;
+ * };
+ */
 export const useSearchTracks = (query: string) => {
   const [results, setResults] = useState<{
     tracks: Track[];

@@ -1,8 +1,28 @@
 import { useState, useEffect } from 'react';
 import { searchArtists, fetchArtistInfo } from '../api/lastfm';
 import { Artist } from '../types/artist';
-
-export const useSearchArtists = (query: string, limit = 10) => {
+/**
+ * Хук для поиска артистов по имени с Last.fm
+ * 
+ * @param {string} query - Имя артиста
+ * @param {number} [limit=10] - Максимальное количество возвращаемых артистов (по умолчанию 12)
+ * 
+ * @returns {Artist[]} artists - Массив найденных артистов с полной информацией
+ * @returns {boolean} artistsLoading - Флаг выполнения запроса (true - загрузка в процессе)
+ * @returns {string|null} artistsError - Сообщение об ошибке (null если ошибки нет)
+ * 
+ * @example
+ * // Базовое использование с параметрами по умолчанию
+ * const { artists, artistsLoading } = useSearchArtists('Madonna');
+ * 
+ * @example
+ * // Обработка состояний загрузки и ошибок
+ * const { artists, artistsLoading, artistsError } = useSearchArtists('Queen');
+ * if (artistsLoading) return <Spinner />;
+ * if (artistsError) return <ErrorMessage text={artistsError} />;
+ * return <ArtistList items={artists} />;
+ */
+export const useSearchArtists = (query: string, limit = 12) => {
   const [artists, setArtists] = useState<Artist[]>([]);
   const [artistsLoading, setLoading] = useState(true);
   const [artistsError, setError] = useState<string | null>(null);
