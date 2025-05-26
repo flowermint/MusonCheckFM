@@ -7,6 +7,7 @@
 }
 
 body {
+  overflow-x:hidden;  /*для горизонтального*/
   margin: 0;
   font-size: 1vw; /* Базовый размер для vw-единиц */
 }
